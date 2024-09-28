@@ -1,0 +1,27 @@
+Crear un entorno virtual en Python: python -m venv nombre_del_entorno (recuerda estar en la carpeta correcta)
+Para usar el entorno virtual creado tenemos que seleccionar el Python: Select Interpreter en la paleta de comandos de VS Code
+(debes asegurarte que la carpeta abierta en VS Code, sea la raíz de la carpeta nombre_del_entorno)
+Al seleccionar eso, te mostrará automáticamente la entorno global y el entorno virtual, asegurate de seleccionar la virtual.
+VS Code reconoce automáticamente el entorno virtual, pero puedes asegurarte al abrir una terminal y ver entreparéntesis el nombre del entorno virtual.
+
+Instalar una librería en especifico: pip install nombre_libreria
+Instalar librerías especificadas en un archivo: pip install -r nombre_archivo (en este caso requirements.txt)
+Puedes tus librerías/dependencias instaladas con el comando: pip list
+
+El archivo .gitignore ignora los archivos especificados y por lo tanto no se suben a la nube.
+|
+Estructura carpeta:
+
+conector-mysql-clase3/    # Carpeta raíz
+├── env                  # Entorno virtual creado
+│
+├── task_manager/        # Paquete principal
+│   ├── __init__.py      # Archivo para convertir esto en un paquete
+│   ├── db.py            # Módulo para la conexión con la base de datos
+│   ├── tasks.py         # Módulo para las operaciones relacionadas con tareas
+│   ├── config.py        # Módulo para la configuración de la base de datos
+│
+├── .gitignore           # Archivo que ignora otros archivos
+├── main.py              # Script principal que importa y usa los módulos
+└── requirements.txt     # Archivo para listar las dependencias (por ejemplo, mysql-connector)
+├── Script.sql           # Script con las querys para crear la base de datos y la tabla
